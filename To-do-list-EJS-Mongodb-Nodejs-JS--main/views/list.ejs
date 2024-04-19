@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+</head>
+<body>
+    <div class="box">
+        <h1>Todo list</h1>
+    </div>  
+    <div class="box">
+        <% ejes.forEach(function(items){ %>
+            <form action="/delete" method="POST">
+                <div class="item">
+                    <input type="checkbox" name="checkbox1" value="<%=items._id %>" onchange="this.form.submit()">
+                    <p>
+                        <%= items.name%>
+                    </p>
+                </div>
+            </form>
+       <% }) %>          
+    <form class="textfield" action="/" method="post">
+        <input type="text" name="ele1" placeholder="Add Task..." id="">
+        <button class="btn" type="submit">+</button>
+        <!--  make glowing text for something new or creative -->
+
+    </form>
+    </div>
+</body>
+</html>
